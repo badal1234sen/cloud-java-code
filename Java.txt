@@ -1,0 +1,29 @@
+ 
+
+public final class Java {
+    private int i;
+
+    Java(int i){
+        this.i=i;
+    }
+   public Java modify(int i){
+        if (this.i==i){
+            return this;
+        }else {
+            return new Java(i);
+        }
+   }
+
+    public static void main(String[] args) {
+        Java j1=new Java(10);
+        Java j2 = j1.modify(100);
+        Java j3 = j1.modify(10);
+
+        System.out.println(j1==j2);
+        System.out.println(j1==j3);
+    }
+}
+
+
+
+
